@@ -100,6 +100,9 @@
     [LKReverseGeocoder reverseGeocodeLocation:manager.location
                             completionHandler:^(NSArray *placemarks, NSString *addressString, NSDictionary *addressDictionary, NSError *error) {
                                 self.place.text = addressString;
+                                NSLog(@"%@", addressString);
+                                NSLog(@"%@", addressDictionary);
+                                NSLog(@"%@", placemarks);
                             }];
 }
 
