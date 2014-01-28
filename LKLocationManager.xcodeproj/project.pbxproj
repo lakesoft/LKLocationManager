@@ -21,6 +21,11 @@
 		BCF2AB1618965DCC005B31F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF2AAF818965DCB005B31F7 /* UIKit.framework */; };
 		BCF2AB1E18965DCC005B31F7 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BCF2AB1C18965DCC005B31F7 /* InfoPlist.strings */; };
 		BCF2AB2018965DCC005B31F7 /* LKLocationManagerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF2AB1F18965DCC005B31F7 /* LKLocationManagerTests.m */; };
+		BCF2AB2C18966084005B31F7 /* LKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF2AB2B18966084005B31F7 /* LKLocationManager.m */; };
+		BCF2AB2D18966087005B31F7 /* LKLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF2AB2B18966084005B31F7 /* LKLocationManager.m */; };
+		BCF2AB3018966380005B31F7 /* LKReverseGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF2AB2F18966380005B31F7 /* LKReverseGeocoder.m */; };
+		BCF2AB3118966380005B31F7 /* LKReverseGeocoder.m in Sources */ = {isa = PBXBuildFile; fileRef = BCF2AB2F18966380005B31F7 /* LKReverseGeocoder.m */; };
+		BCF2AB3B18971F6C005B31F7 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF2AB3A18971F6C005B31F7 /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,12 @@
 		BCF2AB1B18965DCC005B31F7 /* LKLocationManagerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LKLocationManagerTests-Info.plist"; sourceTree = "<group>"; };
 		BCF2AB1D18965DCC005B31F7 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BCF2AB1F18965DCC005B31F7 /* LKLocationManagerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LKLocationManagerTests.m; sourceTree = "<group>"; };
+		BCF2AB2A18966084005B31F7 /* LKLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKLocationManager.h; sourceTree = "<group>"; };
+		BCF2AB2B18966084005B31F7 /* LKLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKLocationManager.m; sourceTree = "<group>"; };
+		BCF2AB2E18966380005B31F7 /* LKReverseGeocoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LKReverseGeocoder.h; sourceTree = "<group>"; };
+		BCF2AB2F18966380005B31F7 /* LKReverseGeocoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LKReverseGeocoder.m; sourceTree = "<group>"; };
+		BCF2AB3A18971F6C005B31F7 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		BCF2AB8C1897A93F005B31F7 /* LKLocationManager.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = LKLocationManager.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +71,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF2AB3B18971F6C005B31F7 /* MapKit.framework in Frameworks */,
 				BCF2AAF718965DCB005B31F7 /* CoreGraphics.framework in Frameworks */,
 				BCF2AAF918965DCB005B31F7 /* UIKit.framework in Frameworks */,
 				BCF2AAF518965DCB005B31F7 /* Foundation.framework in Frameworks */,
@@ -82,8 +94,10 @@
 		BCF2AAE818965DCB005B31F7 = {
 			isa = PBXGroup;
 			children = (
-				BCF2AAFA18965DCB005B31F7 /* LKLocationManager */,
-				BCF2AB1918965DCC005B31F7 /* LKLocationManagerTests */,
+				BCF2AB8B1897A92A005B31F7 /* CocoaPods */,
+				BCF2AB2918965DDE005B31F7 /* Classes */,
+				BCF2AAFA18965DCB005B31F7 /* Examples */,
+				BCF2AB1918965DCC005B31F7 /* Tests */,
 				BCF2AAF318965DCB005B31F7 /* Frameworks */,
 				BCF2AAF218965DCB005B31F7 /* Products */,
 			);
@@ -101,6 +115,7 @@
 		BCF2AAF318965DCB005B31F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BCF2AB3A18971F6C005B31F7 /* MapKit.framework */,
 				BCF2AAF418965DCB005B31F7 /* Foundation.framework */,
 				BCF2AAF618965DCB005B31F7 /* CoreGraphics.framework */,
 				BCF2AAF818965DCB005B31F7 /* UIKit.framework */,
@@ -109,7 +124,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BCF2AAFA18965DCB005B31F7 /* LKLocationManager */ = {
+		BCF2AAFA18965DCB005B31F7 /* Examples */ = {
 			isa = PBXGroup;
 			children = (
 				BCF2AB0318965DCB005B31F7 /* AppDelegate.h */,
@@ -120,7 +135,7 @@
 				BCF2AB0C18965DCB005B31F7 /* Images.xcassets */,
 				BCF2AAFB18965DCB005B31F7 /* Supporting Files */,
 			);
-			path = LKLocationManager;
+			path = Examples;
 			sourceTree = "<group>";
 		};
 		BCF2AAFB18965DCB005B31F7 /* Supporting Files */ = {
@@ -134,13 +149,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		BCF2AB1918965DCC005B31F7 /* LKLocationManagerTests */ = {
+		BCF2AB1918965DCC005B31F7 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
 				BCF2AB1F18965DCC005B31F7 /* LKLocationManagerTests.m */,
 				BCF2AB1A18965DCC005B31F7 /* Supporting Files */,
 			);
-			path = LKLocationManagerTests;
+			path = Tests;
 			sourceTree = "<group>";
 		};
 		BCF2AB1A18965DCC005B31F7 /* Supporting Files */ = {
@@ -150,6 +165,25 @@
 				BCF2AB1C18965DCC005B31F7 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BCF2AB2918965DDE005B31F7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BCF2AB2A18966084005B31F7 /* LKLocationManager.h */,
+				BCF2AB2B18966084005B31F7 /* LKLocationManager.m */,
+				BCF2AB2E18966380005B31F7 /* LKReverseGeocoder.h */,
+				BCF2AB2F18966380005B31F7 /* LKReverseGeocoder.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		BCF2AB8B1897A92A005B31F7 /* CocoaPods */ = {
+			isa = PBXGroup;
+			children = (
+				BCF2AB8C1897A93F005B31F7 /* LKLocationManager.podspec */,
+			);
+			name = CocoaPods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,7 +284,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				BCF2AB0B18965DCB005B31F7 /* ViewController.m in Sources */,
+				BCF2AB2C18966084005B31F7 /* LKLocationManager.m in Sources */,
 				BCF2AB0518965DCB005B31F7 /* AppDelegate.m in Sources */,
+				BCF2AB3018966380005B31F7 /* LKReverseGeocoder.m in Sources */,
 				BCF2AB0118965DCB005B31F7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -259,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCF2AB3118966380005B31F7 /* LKReverseGeocoder.m in Sources */,
 				BCF2AB2018965DCC005B31F7 /* LKLocationManagerTests.m in Sources */,
+				BCF2AB2D18966087005B31F7 /* LKLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,8 +417,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LKLocationManager/LKLocationManager-Prefix.pch";
-				INFOPLIST_FILE = "LKLocationManager/LKLocationManager-Info.plist";
+				GCC_PREFIX_HEADER = "Examples/LKLocationManager-Prefix.pch";
+				INFOPLIST_FILE = "Examples/LKLocationManager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -392,8 +430,8 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LKLocationManager/LKLocationManager-Prefix.pch";
-				INFOPLIST_FILE = "LKLocationManager/LKLocationManager-Info.plist";
+				GCC_PREFIX_HEADER = "Examples/LKLocationManager-Prefix.pch";
+				INFOPLIST_FILE = "Examples/LKLocationManager-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -410,12 +448,12 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LKLocationManager/LKLocationManager-Prefix.pch";
+				GCC_PREFIX_HEADER = "Examples/LKLocationManager-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "LKLocationManagerTests/LKLocationManagerTests-Info.plist";
+				INFOPLIST_FILE = "Tests/LKLocationManagerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -433,8 +471,8 @@
 					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LKLocationManager/LKLocationManager-Prefix.pch";
-				INFOPLIST_FILE = "LKLocationManagerTests/LKLocationManagerTests-Info.plist";
+				GCC_PREFIX_HEADER = "Examples/LKLocationManager-Prefix.pch";
+				INFOPLIST_FILE = "Tests/LKLocationManagerTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -460,6 +498,7 @@
 				BCF2AB2518965DCC005B31F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCF2AB2618965DCC005B31F7 /* Build configuration list for PBXNativeTarget "LKLocationManagerTests" */ = {
 			isa = XCConfigurationList;
@@ -468,6 +507,7 @@
 				BCF2AB2818965DCC005B31F7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
