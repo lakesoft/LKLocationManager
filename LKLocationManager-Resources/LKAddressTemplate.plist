@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<string>City</string>
+	<string>Country</string>
+	<string>CountryCode</string>
+	<string>FormattedAddressLines</string>
+	<string>Name</string>
+	<string>PostCodeExtension</string>
+	<string>State</string>
+	<string>Street</string>
+	<string>SubAdministrativeArea</string>
+	<string>SubLocality</string>
+	<string>SubThoroughfare</string>
+	<string>Thoroughfare</string>
+	<string>ZIP</string>
+</array>
+</plist>

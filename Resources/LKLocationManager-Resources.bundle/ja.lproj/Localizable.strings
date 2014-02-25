@@ -1,0 +1,32 @@
+/* 
+  Localizable.strings
+  LKDateUtility
+
+  Created by Hiroshi Hashiguchi on 2014/02/11.
+  Copyright (c) 2014年 lakesoft. All rights reserved.
+*/
+"desc.City" = "市区町村";
+"desc.Country" = "国";
+"desc.CountryCode" = "国コード";
+"desc.Name" = "場所名";
+"desc.PostCodeExtension" = "郵便番号拡張";
+"desc.State" = "都道府県";
+"desc.Street" = "番地";
+"desc.SubAdministrativeArea" = "行政区";
+"desc.SubLocality" = "町";
+"desc.SubThoroughfare" = "番地";
+"desc.Thoroughfare" = "町丁";
+"desc.ZIP" = "郵便番号";
+
+"example.City" = "San Francisco";
+"example.Country" = "United States";
+"example.CountryCode" = "US";
+"example.Name" = "Apple Store, San Francisco";
+"example.PostCodeExtension" = "4004";
+"example.State" = "CA";
+"example.Street" = "1800 Ellis St";
+"example.SubAdministrativeArea" = "San Francisco";
+"example.SubLocality" = "Union Square";
+"example.SubThoroughfare" = "1800";
+"example.Thoroughfare" = "Ellis St";
+"example.ZIP" = "94115";

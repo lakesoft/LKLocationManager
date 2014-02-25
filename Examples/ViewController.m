@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import "LKLocationManager.h"
 #import "LKReverseGeocoder.h"
+#import "LKAddressTemplate.h"
+#import "LKAddressTemplateDescription.h"
 #import <MapKit/MapKit.h>
 
 @interface MapAnnotation : NSObject <MKAnnotation>
@@ -103,6 +105,32 @@
                                 NSLog(@"%@", addressString);
                                 NSLog(@"%@", addressDictionary);
                                 NSLog(@"%@", placemarks);
+                                
+                                NSString* template = @"\n"\
+                                @"addr.Citry                 : %addr.City\n"\
+                                @"addr.Country               : %addr.Country\n"\
+                                @"addr.CountryCode           : %addr.CountryCode\n"\
+                                @"addr.Name                  : %addr.Name\n"\
+                                @"addr.PostCodeExtension     : %addr.PostCodeExtension\n"\
+                                @"addr.State                 : %addr.State\n"\
+                                @"addr.Street                : %addr.Street\n"\
+                                @"addr.SubAdministrativeArea : %addr.SubAdministrativeArea\n"\
+                                @"addr.SubLocality           : %addr.SubLocality\n"\
+                                @"addr.SubThoroughfare       : %addr.SubThoroughfare\n"\
+                                @"addr.Thoroughfare          : %addr.Thoroughfare\n"\
+                                @"addr.ZIP                   : %addr.ZIP\n"\
+                                ;
+                                NSString* result = [LKAddressTemplate convertWithTemplate:template
+                                                                        addressDictionary:addressDictionary];
+                                NSLog(@"%@", result);
+                                
+                                NSMutableString* str = NSMutableString.string;
+                                [str appendString:@"\n"];
+                                for (int i=0; i < LKAddressTemplate.numberOfKeywords; i++) {
+                                    LKAddressTemplateDescription* desc = [LKAddressTemplate descriptionAtIndex:i];
+                                    [str appendFormat:@"%@: %@\n", desc.keyword, desc.title];
+                                }
+                                NSLog(@"%@", str);
                             }];
 }
 

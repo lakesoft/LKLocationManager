@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>LKLocationManager-Resources.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>LKLocationManager.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -12,6 +17,11 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>BCA0D6E118BC95C500B4794E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>BCF2AAF018965DCB005B31F7</key>
 		<dict>
 			<key>primary</key>
