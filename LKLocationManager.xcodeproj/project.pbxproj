@@ -65,8 +65,8 @@
 		BCA0D6E718BC95C500B4794E /* LKLocationManager-Resources-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "LKLocationManager-Resources-Info.plist"; sourceTree = "<group>"; };
 		BCA0D6EB18BC95C500B4794E /* LKLocationManager-Resources-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LKLocationManager-Resources-Prefix.pch"; sourceTree = "<group>"; };
 		BCA0D6EF18BC961800B4794E /* LKAddressTemplate.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = LKAddressTemplate.plist; sourceTree = "<group>"; };
-		BCA0D70F18BC992B00B4794E /* ja */ = {isa = PBXFileReference; lastKnownFileType = file; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
-		BCA0D71018BC992C00B4794E /* en */ = {isa = PBXFileReference; lastKnownFileType = file; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCA0D70F18BC992B00B4794E /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BCA0D71018BC992C00B4794E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BCA0D71118BC99DC00B4794E /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		BCA0D71318BC9A0300B4794E /* LKLocationManager-Resources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "LKLocationManager-Resources.bundle"; sourceTree = "<group>"; };
 		BCF2AAF118965DCB005B31F7 /* LKLocationManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LKLocationManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -324,7 +324,7 @@
 		BCF2AAE918965DCB005B31F7 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = lakesoft;
 				TargetAttributes = {
 					BCF2AB1118965DCC005B31F7 = {
@@ -513,7 +513,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -552,7 +551,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -610,7 +608,6 @@
 		BCF2AB2718965DCC005B31F7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LKLocationManager.app/LKLocationManager";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -633,7 +630,6 @@
 		BCF2AB2818965DCC005B31F7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/LKLocationManager.app/LKLocationManager";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
@@ -659,6 +655,7 @@
 				BCA0D6EE18BC95C500B4794E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BCF2AAEC18965DCB005B31F7 /* Build configuration list for PBXProject "LKLocationManager" */ = {
 			isa = XCConfigurationList;

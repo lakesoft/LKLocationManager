@@ -23,9 +23,19 @@
                        } else {
                            CLPlacemark* placemark = [placemarks objectAtIndex:0];
                            addressDictionary = placemark.addressDictionary;
-                           NSDictionary* address = @{(NSString*)kABPersonAddressStateKey :[addressDictionary objectForKey:@"State"],
-                                                     (NSString*)kABPersonAddressCityKey  :[addressDictionary objectForKey:@"City"],
-                                                     (NSString*)kABPersonAddressStreetKey:[addressDictionary objectForKey:@"Street"]};
+                           NSString* state = addressDictionary[@"State"];
+                           NSString* city = addressDictionary[@"City"];
+                           NSString* street = addressDictionary[@"Street"];
+                           NSMutableDictionary* address = @{}.mutableCopy;
+                           if (state) {
+                               address[(NSString*)kABPersonAddressStateKey] = state;
+                           }
+                           if (city) {
+                               address[(NSString*)kABPersonAddressCityKey] = city;
+                           }
+                           if (street) {
+                               address[(NSString*)kABPersonAddressStreetKey] = street;
+                           }
                            addressString = ABCreateStringWithAddressDictionary(address, NO);
                            addressString = [addressString stringByReplacingOccurrencesOfString:@"\n"
                                                                                     withString:@""];
