@@ -36,10 +36,14 @@
 #pragma mark - API
 + (NSString*)convertWithTemplate:(NSString*)template addressDictionary:(NSDictionary*)addressDictionary
 {
-    return [self convertWithTemplate:template addressDictionary:addressDictionary locale:nil];
+    return [self convertWithTemplate:template
+                   addressDictionary:addressDictionary
+                       defaultString:^NSString *(NSString *key) {
+                           return @"";
+                       }];
 }
 
-+ (NSString*)convertWithTemplate:(NSString*)template addressDictionary:(NSDictionary*)addressDictionary locale:(NSLocale*)locale
++ (NSString*)convertWithTemplate:(NSString*)template addressDictionary:(NSDictionary*)addressDictionary defaultString:(NSString*(^)(NSString* keyword))defaultString
 {
     NSString* result = template;
 
@@ -50,9 +54,10 @@
     for (NSString* key in keys) {
         NSString* keyword = LK_ADDRESS_TEMPLATE_KEYWORD(key);
         NSString* string = addressDictionary[key];
-        if (string.length > 0) {
-            result = [result stringByReplacingOccurrencesOfString:keyword withString:string];
+        if (string.length == 0) {
+            string = defaultString(keyword);
         }
+        result = [result stringByReplacingOccurrencesOfString:keyword withString:string];
     }
     return result;
 }

@@ -17,7 +17,7 @@
 
 #pragma mark - Converter
 + (NSString*)convertWithTemplate:(NSString*)template addressDictionary:(NSDictionary*)addressDictionary;
-+ (NSString*)convertWithTemplate:(NSString*)template addressDictionary:(NSDictionary*)addressDictionary locale:(NSLocale*)locale;
++ (NSString*)convertWithTemplate:(NSString*)template addressDictionary:(NSDictionary*)addressDictionary defaultString:(NSString*(^)(NSString* keyword))defaultString;
 
 #pragma mark - Keyword list
 + (NSInteger)numberOfKeywords;
