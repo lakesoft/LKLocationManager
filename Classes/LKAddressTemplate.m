@@ -50,8 +50,9 @@
     for (NSString* key in keys) {
         NSString* keyword = LK_ADDRESS_TEMPLATE_KEYWORD(key);
         NSString* string = addressDictionary[key];
-        string = string ? string : @"";
-        result = [result stringByReplacingOccurrencesOfString:keyword withString:string];
+        if (string.length > 0) {
+            result = [result stringByReplacingOccurrencesOfString:keyword withString:string];
+        }
     }
     return result;
 }
