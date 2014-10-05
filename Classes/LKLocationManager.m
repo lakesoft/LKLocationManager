@@ -135,6 +135,24 @@ NSString* const LKLocationManagerDidFinishLocationNotification = @"LKLocationMan
     [self _stopUpdatingLocationWithStatus:LKLocationManagerStatusLocationFailed];
 }
 
+- (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status
+{
+    if (status == kCLAuthorizationStatusNotDetermined) {
+        NSString* desc = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"NSLocationAlwaysUsageDescription"];
+        if (desc) {
+            if ([self.locationManager respondsToSelector:@selector(requestAlwaysAuthorization)]) {
+                [manager requestAlwaysAuthorization];
+            }
+        } else {
+            desc = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"NSLocationWhenInUseUsageDescription"];
+            if (desc) {
+                [manager requestWhenInUseAuthorization];
+            }
+        }
+    }
+}
+
+
 
 #pragma mark - API (properties)
 - (BOOL)isLocationUpdating
