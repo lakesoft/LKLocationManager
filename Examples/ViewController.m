@@ -144,7 +144,7 @@
                               horizontalAccuracy:kCLLocationAccuracyThreeKilometers
                                 verticalAccuracy:kCLLocationAccuracyThreeKilometers
                                        timestamp:NSDate.date];
-    NSDictionary* dict = [LKReverseGeocoder reverseGeocodeLocation:loc];
+    NSDictionary* dict = [LKReverseGeocoder placeInformationWithLocation:loc];
     NSLog(@"%@", dict[LKReverseGeocoderKeyAddressString]);
 }
 

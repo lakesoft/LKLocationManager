@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LKLocationManager"
-  s.version      = "1.2.0"
+  s.version      = "1.2.1"
   s.summary      = "Core Location Library"
   s.description  = <<-DESC
 Location Library to get location easily. And Supports reverse Geo cording.

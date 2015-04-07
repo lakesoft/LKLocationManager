@@ -42,7 +42,7 @@ typedef void (^LKGeocodeCompletionHandler)(NSArray *placemarks,     // <CLPlacem
 + (void)reverseGeocodeLocation:(CLLocation *)location completionHandler:(LKGeocodeCompletionHandler)completionHandler;
 
 // API (synchronous)
-+ (NSDictionary*)reverseGeocodeLocation:(CLLocation *)location;
++ (NSDictionary*)placeInformationWithLocation:(CLLocation *)location;
 
 // keys
 extern NSString* const LKReverseGeocoderKeyPlacemarks;

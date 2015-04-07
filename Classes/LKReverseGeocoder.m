@@ -51,7 +51,7 @@ NSString* const LKReverseGeocoderKeyError = @"LKReverseGeocoderKeyError";
 }
 
 
-+ (NSDictionary*)reverseGeocodeLocation:(CLLocation *)location
++ (NSDictionary*)placeInformationWithLocation:(CLLocation *)location
 {
     NSMutableDictionary* dict = @{}.mutableCopy;
     __block BOOL finished = NO;
