@@ -11,7 +11,7 @@
 
 @interface LKReverseGeocoder : NSObject
 
-// API (Reverse geocoding)
+// API (asynchronous)
 typedef void (^LKGeocodeCompletionHandler)(NSArray *placemarks,     // <CLPlacemark>
                                            NSString* addressString,
                                            NSDictionary* addressDictionary,
@@ -40,5 +40,15 @@ typedef void (^LKGeocodeCompletionHandler)(NSArray *placemarks,     // <CLPlacem
 //}
 
 + (void)reverseGeocodeLocation:(CLLocation *)location completionHandler:(LKGeocodeCompletionHandler)completionHandler;
+
+// API (synchronous)
++ (NSDictionary*)reverseGeocodeLocation:(CLLocation *)location;
+
+// keys
+extern NSString* const LKReverseGeocoderKeyPlacemarks;
+extern NSString* const LKReverseGeocoderKeyAddressString;
+extern NSString* const LKReverseGeocoderKeyAddressDictionary;
+extern NSString* const LKReverseGeocoderKeyError;
+
 
 @end

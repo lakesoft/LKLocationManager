@@ -8,6 +8,11 @@
 
 #import "LKReverseGeocoder.h"
 
+NSString* const LKReverseGeocoderKeyPlacemarks = @"LKReverseGeocoderKeyPlacemarks";
+NSString* const LKReverseGeocoderKeyAddressString = @"LKReverseGeocoderKeyAddressString";
+NSString* const LKReverseGeocoderKeyAddressDictionary = @"LKReverseGeocoderKeyAddressDictionary";
+NSString* const LKReverseGeocoderKeyError = @"LKReverseGeocoderKeyError";
+
 @implementation LKReverseGeocoder
 
 #pragma mark - API (Reverse geocoding)
@@ -46,4 +51,30 @@
 }
 
 
++ (NSDictionary*)reverseGeocodeLocation:(CLLocation *)location
+{
+    NSMutableDictionary* dict = @{}.mutableCopy;
+    __block BOOL finished = NO;
+    [self reverseGeocodeLocation:location
+               completionHandler:^(NSArray *placemarks, NSString *addressString, NSDictionary *addressDictionary, NSError *error) {
+                   if (placemarks) {
+                       dict[LKReverseGeocoderKeyPlacemarks] = placemarks;
+                   }
+                   if (addressString) {
+                       dict[LKReverseGeocoderKeyAddressString] = addressString;
+                   }
+                   if (addressDictionary) {
+                       dict[LKReverseGeocoderKeyAddressDictionary] = addressDictionary;
+                   }
+                   if (error) {
+                       dict[LKReverseGeocoderKeyError] = error;
+                   }
+                   finished = YES;
+               }];
+    while (!finished) {
+        [NSRunLoop.currentRunLoop runUntilDate:[NSDate dateWithTimeIntervalSinceNow:0.1]];
+    }
+
+    return dict;
+}
 @end
