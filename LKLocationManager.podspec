@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "LKLocationManager"
-  s.version      = "1.2.1"
+  s.version      = "1.3.0"
   s.summary      = "Core Location Library"
   s.description  = <<-DESC
 Location Library to get location easily. And Supports reverse Geo cording.
@@ -10,7 +10,7 @@ Location Library to get location easily. And Supports reverse Geo cording.
   s.author       = { "Hiroshi Hashiguchi" => "xcatsan@mac.com" }
   s.source       = { :git => "https://github.com/lakesoft/LKLocationManager.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
+  s.platform     = :ios, '9.0'
   s.requires_arc = true
 
   s.source_files = 'Classes/*'

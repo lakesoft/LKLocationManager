@@ -7,6 +7,7 @@
 //
 
 #import "LKReverseGeocoder.h"
+@import Contacts;
 
 NSString* const LKReverseGeocoderKeyPlacemarks = @"LKReverseGeocoderKeyPlacemarks";
 NSString* const LKReverseGeocoderKeyAddressString = @"LKReverseGeocoderKeyAddressString";
@@ -33,13 +34,13 @@ NSString* const LKReverseGeocoderKeyError = @"LKReverseGeocoderKeyError";
                            NSString* street = addressDictionary[@"Street"];
                            NSMutableDictionary* address = @{}.mutableCopy;
                            if (state) {
-                               address[(NSString*)kABPersonAddressStateKey] = state;
+                               address[CNPostalAddressStateKey] = state;
                            }
                            if (city) {
-                               address[(NSString*)kABPersonAddressCityKey] = city;
+                               address[CNPostalAddressCityKey] = city;
                            }
                            if (street) {
-                               address[(NSString*)kABPersonAddressStreetKey] = street;
+                               address[CNPostalAddressStreetKey] = street;
                            }
                            addressString = ABCreateStringWithAddressDictionary(address, NO);
                            addressString = [addressString stringByReplacingOccurrencesOfString:@"\n"
