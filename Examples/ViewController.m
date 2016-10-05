@@ -102,9 +102,9 @@
     [LKReverseGeocoder reverseGeocodeLocation:manager.location
                             completionHandler:^(NSArray *placemarks, NSString *addressString, NSDictionary *addressDictionary, NSError *error) {
                                 self.place.text = addressString;
-                                NSLog(@"%@", addressString);
-                                NSLog(@"%@", addressDictionary);
-                                NSLog(@"%@", placemarks);
+                                NSLog(@"[addressString] %@", addressString);
+                                NSLog(@"[addressDictionary] %@", addressDictionary);
+                                NSLog(@"[placemarks] %@", placemarks);
                                 
                                 NSString* template = @"\n"\
                                 @"addr.Citry                 : %addr.City\n"\

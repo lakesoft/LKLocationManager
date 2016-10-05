@@ -42,9 +42,8 @@ NSString* const LKReverseGeocoderKeyError = @"LKReverseGeocoderKeyError";
                            if (street) {
                                address[CNPostalAddressStreetKey] = street;
                            }
-                           addressString = ABCreateStringWithAddressDictionary(address, NO);
-                           addressString = [addressString stringByReplacingOccurrencesOfString:@"\n"
-                                                                                    withString:@""];
+                           NSArray* lines = addressDictionary[@"FormattedAddressLines"];
+                           addressString = [lines componentsJoinedByString:@" "];
                        }
                        completionHandler(placemarks, addressString, addressDictionary, error);
                    }];
